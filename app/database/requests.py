@@ -55,3 +55,7 @@ async def add_item_in_basket(tg_id, item_name):
             session.add(basket)
 
         await session.commit()
+
+
+async def send_message_to_user(bot, chat_id, text):
+    await bot.send_message(chat_id=chat_id, text=text)
